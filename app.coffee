@@ -24,5 +24,5 @@ if 'development' == app.get 'env'
 routes app
 
 http.createServer(app).listen(app.get('port'), (x)->
-    console.log 'Express server listening on port ' + app.get('port')
+    console.log 'Express server listening on port ' + app.get 'port'
 );

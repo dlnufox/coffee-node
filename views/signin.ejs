@@ -1,0 +1,24 @@
+<%- include header%>
+<div class="container signin" ng-controller="signin">
+    <form role="form" action="login" method="post">
+        <h2>Please sign in</h2>
+        <p>
+            <input type="text" name="userName" class="form-control" placeholder="Email address" required autofocus>
+        </p>
+        <p>
+            <input type="password" name="userPwd" class="form-control" placeholder="Password" required>
+        </p>
+        <label class="checkbox">
+            <input type="checkbox" value="remember-me"> {{rememberme}}
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">{{signin}}</button>
+    </form>
+</div>
+<script type="text/javascript">
+    var signin = function($scope, $element) {
+        // body...
+        $scope.signin = 'Sign in';
+        $scope.rememberme = 'Remember me';
+    }
+</script>
+<%- include footer%>

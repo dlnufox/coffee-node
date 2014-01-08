@@ -1,15 +1,12 @@
 user =
-  toLogin : (req, res) ->
-    res.render 'login', title:"登陆页面"
-    null
-  login : (req, res) ->
-    userName = req.body.username
-    userPwd = req.body.userpwd
-    console.log userName
-    console.log userPwd
-    res.send "登陆的用户为 #{userName} , 密码为:#{userPwd}"
-    null
-  logout : (req, res) ->
-    console.log "登陆成功"
+  toLogin: (req, res) ->
+    res.render 'signin', title:'登录'
+  login: (req, res) ->
+    username = req.body.userName
+    userpwd = req.body.userPwd
+    if username == 'gordon' and userpwd == '111111'
+      res.render 'index', title:"恭喜你#{username} 登录成功"
+    else
+      res.render 'signin', title:"请重新登录"
 
 module.exports = user

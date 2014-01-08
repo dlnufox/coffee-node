@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="app.coffee" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="D:/3.develop/2.developTools/nodejs/node" path-to-js-file="app.coffee" working-dir="$PROJECT_DIR$" coffeescript-path="C:\Users\Gordon\WebstormProjects\coffee-node\node_modules\coffee-script\bin\coffee" coffeescript-run="true">
+  <configuration default="false" name="app.coffee" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/local/bin/node" path-to-js-file="app.coffee" working-dir="$PROJECT_DIR$" coffeescript-path="$PROJECT_DIR$/node_modules/coffee-script/bin/coffee" coffeescript-run="true">
     <browser start="false" url="http://localhost:3000" with-js-debugger="false" />
     <RunnerSettings RunnerId="NodeJS.debug" />
     <RunnerSettings RunnerId="NodeJS.run" />

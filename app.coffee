@@ -1,6 +1,5 @@
-
 express = require 'express'
-routes = require './routes/index'
+route = require './routes'
 http = require 'http'
 path = require 'path'
 
@@ -12,17 +11,16 @@ app.set 'view engine', 'ejs'
 app.use express.favicon()
 app.use express.logger 'dev'
 app.use express.json()
-app.use express.urlencoded() 
+app.use express.urlencoded()
 app.use express.methodOverride()
 app.use app.router
+app.use express.static path.join __dirname, 'public'
 
-app.use(express.static(path.join(__dirname, 'public')));
-
-if 'development' == app.get 'env'
+if  'development' == app.get 'env'
   app.use express.errorHandler()
 
-routes app
+route app
 
-http.createServer(app).listen(app.get('port'), (x)->
+http.createServer(app).listen app.get('port'), ()->
     console.log 'Express server listening on port ' + app.get 'port'
-);
+

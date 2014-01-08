@@ -6,4 +6,5 @@ router = (app) ->
   app.post '/user', (req, res) -> user.login(req, res)
   app.get '/book', (req, res) -> res.send("bookmark list")
 
+
 module.exports = router

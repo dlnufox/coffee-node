@@ -12,5 +12,4 @@ user =
   logout : (req, res) ->
     console.log "登陆成功"
 
-
 module.exports = user

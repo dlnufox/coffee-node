@@ -13,11 +13,8 @@
     app.get('/user', function(req, res) {
       return user.toLogin(req, res);
     });
-    app.post('/user', function(req, res) {
+    return app.post('/user', function(req, res) {
       return user.login(req, res);
-    });
-    return app.get('/book', function(req, res) {
-      return res.send('ok');
     });
   };
 
